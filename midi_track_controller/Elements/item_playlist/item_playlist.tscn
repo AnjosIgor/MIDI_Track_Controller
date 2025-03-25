@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://c17h072sk6mjb"]
+
+[ext_resource type="Script" uid="uid://b5o7b6nb8yyte" path="res://Elements/item_playlist/item_playlist.gd" id="1_cm8oa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fq76j"]
+bg_color = Color(0.446193, 0.4402, 0.62, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="ItemPlaylist" type="PanelContainer"]
+offset_right = 73.0
+offset_bottom = 32.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fq76j")
+script = ExtResource("1_cm8oa")
+
+[node name="Linha" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Remover" type="Button" parent="Linha"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Remover"
+text = "X"
+flat = true
+
+[node name="Nome" type="Label" parent="Linha"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Tocar" type="Button" parent="Linha"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Play"
+text = "P"
+flat = true

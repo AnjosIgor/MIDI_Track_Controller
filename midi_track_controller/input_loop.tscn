@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ducva2m371pg4"]
+
+[node name="InputLoopIn" type="LineEdit"]
+custom_minimum_size = Vector2(100, 0)
+placeholder_text = "00:00:000"
+alignment = 1
+max_length = 9

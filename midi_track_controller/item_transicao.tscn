@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://vgbgied4rw8j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fq76j"]
+bg_color = Color(0.62, 0.4402, 0.443197, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1p32"]
+bg_color = Color(0, 0, 0, 0.152941)
+border_width_top = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0)
+
+[node name="ItemTransicao" type="PanelContainer"]
+theme_override_styles/panel = SubResource("StyleBoxFlat_fq76j")
+
+[node name="Linha" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+
+[node name="Remover" type="Button" parent="Linha"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Remover"
+text = "X"
+flat = true
+
+[node name="OptionButton" type="OptionButton" parent="Linha"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/normal = SubResource("StyleBoxFlat_y1p32")
+
+[node name="Ativo" type="Button" parent="Linha"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+tooltip_text = "Play"
+toggle_mode = true
+text = "P"
+flat = true
