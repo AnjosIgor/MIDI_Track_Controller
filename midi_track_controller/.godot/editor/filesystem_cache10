@@ -1,19 +1,20 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1742865007
-icon.svg::CompressedTexture2D/CompressedTexture2D::4321766476243142083::1742749954::1742749965::1::::<><><>0<>0<>0a29b109bb50d8a5a13fe8734d86a8c2<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-input_loop.tscn::PackedScene::8568444174180267125::1742864848::0::1::::<><><>0<>0<><>::
-item_playlist.tscn::PackedScene::6664282777191302011::1742864848::0::1::::<><><>0<>0<><>::
-item_sfx.tscn::PackedScene::5076525272885118436::1742864848::0::1::::<><><>0<>0<><>::
-item_transicao.tscn::PackedScene::1486423841221008123::1742864848::0::1::::<><><>0<>0<><>::
-main.tscn::PackedScene::2803046587068776850::1742865027::0::1::::<><><>0<>0<><>::uid://ducva2m371pg4::::res://input_loop.tscn<>uid://celdvn1ay71o7::::res://item_sfx.tscn<>uid://dxii5unq14ooq::::res://Assets/Mix - Musicas Deivid.mp3<>uid://c17h072sk6mjb::::res://item_playlist.tscn<>uid://vgbgied4rw8j::::res://item_transicao.tscn<>uid://c0e70cjlssf81::::res://Assets/TENSAO.mp3
-StyleBoxFlatTransparent.tres::StyleBoxFlat/StyleBoxFlat::8679231167783080535::1742754411::0::1::::<><><>0<>0<><>::
-::res://Assets/::1742761265
-LoopInMarker.svg::CompressedTexture2D/CompressedTexture2D::6884574321383089305::1742758117::1742758205::1::::<><><>0<>0<>edb8803a211639f0888f1294b7fe7b09<>res://.godot/imported/LoopInMarker.svg-59aa770655521e1896c0642aff6497df.ctex::
-LoopOutMarker.svg::CompressedTexture2D/CompressedTexture2D::2920433205360582899::1742758117::1742758117::1::::<><><>0<>0<>8bd0ace597e489ef52179794eac5692e<>res://.godot/imported/LoopOutMarker.svg-9c80dc21c62444c016e9252596a54174.ctex::
-Mix - Musicas Deivid.mp3::AudioStreamMP3/AudioStreamMP3::8790660857858133100::1742761165::1742761166::1::::<><><>0<>0<>2eb24314155f0430a2d09eb6d7bcd30d<>res://.godot/imported/Mix - Musicas Deivid.mp3-8f7082425e3b8a8a556149efc6531f1f.mp3str::
-TENSAO.mp3::AudioStreamMP3/AudioStreamMP3::6537807677443898208::1742761165::1742761265::1::::<><><>0<>0<>12bcf9dd551af5a83c95d4362ea7d7de<>res://.godot/imported/TENSAO.mp3-bb525f0d2a4f1f7281b93c8f2ead9d84.mp3str::
-::res://Elements/::1742864996
-::res://Elements/item_playlist/::0
-::res://Playlists/::1742757837
-::res://SFX/::1742757825
-::res://Trasitions/::1742757974
+::res://::1742919768
+icon.svg::CompressedTexture2D/CompressedTexture2D::4321766476243142083::1742915843::1742915945::1::::<><><>0<>0<>0a29b109bb50d8a5a13fe8734d86a8c2<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+input_loop.tscn::PackedScene::8568444174180267125::1742919647::0::1::::<><><>0<>0<><>::
+item_sfx.tscn::PackedScene::5076525272885118436::1742919647::0::1::::<><><>0<>0<><>::
+item_transicao.tscn::PackedScene::1486423841221008123::1742919647::0::1::::<><><>0<>0<><>::
+main.gd::GDScript::7221549835119377741::1742919028::0::1::::<>Node<><>0<>0<><>::
+main.tscn::PackedScene::2803046587068776850::1742919647::0::1::::<><><>0<>0<><>::uid://da5f4usdqa68p::::res://main.gd<>uid://ducva2m371pg4::::res://input_loop.tscn<>uid://celdvn1ay71o7::::res://item_sfx.tscn<>uid://dxii5unq14ooq::::res://Assets/Mix - Musicas Deivid.mp3<>uid://c17h072sk6mjb::::res://Elements/item_playlist/item_playlist.tscn<>uid://vgbgied4rw8j::::res://item_transicao.tscn<>uid://c0e70cjlssf81::::res://Assets/TENSAO.mp3<>uid://dtu15xq5fwxss::::res://main_player.gd
+main_player.gd::GDScript::8535771085036749202::1742919647::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
+StyleBoxFlatTransparent.tres::StyleBoxFlat/StyleBoxFlat::8679231167783080535::1742915843::0::1::::<><><>0<>0<><>::
+::res://Assets/::1742915945
+LoopInMarker.svg::CompressedTexture2D/CompressedTexture2D::6884574321383089305::1742915843::1742915945::1::::<><><>0<>0<>edb8803a211639f0888f1294b7fe7b09<>res://.godot/imported/LoopInMarker.svg-59aa770655521e1896c0642aff6497df.ctex::
+LoopOutMarker.svg::CompressedTexture2D/CompressedTexture2D::2920433205360582899::1742915843::1742915945::1::::<><><>0<>0<>8bd0ace597e489ef52179794eac5692e<>res://.godot/imported/LoopOutMarker.svg-9c80dc21c62444c016e9252596a54174.ctex::
+Mix - Musicas Deivid.mp3::AudioStreamMP3/AudioStreamMP3::8790660857858133100::1742915843::1742915945::1::::<><><>0<>0<>2eb24314155f0430a2d09eb6d7bcd30d<>res://.godot/imported/Mix - Musicas Deivid.mp3-8f7082425e3b8a8a556149efc6531f1f.mp3str::
+TENSAO.mp3::AudioStreamMP3/AudioStreamMP3::6537807677443898208::1742915843::1742915945::1::::<><><>0<>0<>12bcf9dd551af5a83c95d4362ea7d7de<>res://.godot/imported/TENSAO.mp3-bb525f0d2a4f1f7281b93c8f2ead9d84.mp3str::
+::res://Elements/::1742915843
+::res://Elements/item_playlist/::1742919647
+item_playlist.gd::GDScript::4522933659350159258::1742919587::0::1::::ItemPlaylist<>Node<><>0<>0<><>::
+item_playlist.tscn::PackedScene::6664282777191302011::1742919647::0::1::::<><><>0<>0<><>::uid://b5o7b6nb8yyte::::res://Elements/item_playlist/item_playlist.gd
+item_script_class.gd::GDScript::9098905956292759159::1742919578::0::1::::<>RefCounted<><>0<>0<><>::

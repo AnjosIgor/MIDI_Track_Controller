@@ -1,3 +1,4 @@
+ItemPlaylist
 Button
 Label
 VBoxContainer
@@ -11,4 +12,3 @@ ScrollContainer
 PanelContainer
 VSeparator
 AudioStreamPlayer
-LineEdit

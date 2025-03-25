@@ -1,5 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://bf621dr8yg6w1"]
+[gd_scene load_steps=21 format=3 uid="uid://bf621dr8yg6w1"]
 
+[ext_resource type="Script" uid="uid://da5f4usdqa68p" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://ducva2m371pg4" path="res://input_loop.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://celdvn1ay71o7" path="res://item_sfx.tscn" id="1_lquwl"]
 [ext_resource type="AudioStream" uid="uid://dxii5unq14ooq" path="res://Assets/Mix - Musicas Deivid.mp3" id="2_0xm2m"]
@@ -78,6 +79,7 @@ Vector2i(-1, -1): {
 }
 
 [node name="Main" type="Node"]
+script = ExtResource("1_5vw27")
 
 [node name="Fundo" type="PanelContainer" parent="."]
 offset_right = 1152.0

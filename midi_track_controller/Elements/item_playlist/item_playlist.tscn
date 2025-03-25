@@ -30,6 +30,8 @@ flat = true
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_horizontal = 3
+text = "Musica"
+vertical_alignment = 1
 
 [node name="Tocar" type="Button" parent="Linha"]
 custom_minimum_size = Vector2(32, 32)
