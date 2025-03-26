@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bf621dr8yg6w1"]
+[gd_scene load_steps=22 format=3 uid="uid://bf621dr8yg6w1"]
 
 [ext_resource type="Script" uid="uid://da5f4usdqa68p" path="res://main.gd" id="1_5vw27"]
 [ext_resource type="PackedScene" uid="uid://ducva2m371pg4" path="res://input_loop.tscn" id="1_ig7tw"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://dxii5unq14ooq" path="res://Assets/Mix - Musicas Deivid.mp3" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://c17h072sk6mjb" path="res://Elements/item_playlist/item_playlist.tscn" id="2_7mycd"]
 [ext_resource type="PackedScene" uid="uid://vgbgied4rw8j" path="res://item_transicao.tscn" id="3_7mycd"]
+[ext_resource type="Script" uid="uid://dbbipormys28x" path="res://playlist.gd" id="3_kek77"]
 [ext_resource type="AudioStream" uid="uid://c0e70cjlssf81" path="res://Assets/TENSAO.mp3" id="4_272bh"]
 [ext_resource type="Script" uid="uid://dtu15xq5fwxss" path="res://main_player.gd" id="7_272bh"]
 
@@ -72,7 +73,7 @@ clip_2/auto_advance = 0
 _transitions = {
 Vector2i(-1, -1): {
 "fade_beats": 1.0,
-"fade_mode": 3,
+"fade_mode": 0,
 "from_time": 0,
 "to_time": 0
 }
@@ -100,41 +101,41 @@ theme_override_constants/separation = 5
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="FundoSFX" type="PanelContainer" parent="Fundo/Margem/Coluna/Listas"]
+[node name="Sfx" type="PanelContainer" parent="Fundo/Margem/Coluna/Listas"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Margem" type="MarginContainer" parent="Fundo/Margem/Coluna/Listas/FundoSFX"]
+[node name="Margem" type="MarginContainer" parent="Fundo/Margem/Coluna/Listas/Sfx"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Coluna" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem"]
+[node name="Coluna" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem"]
 layout_mode = 2
 
-[node name="Scroll" type="ScrollContainer" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem/Coluna"]
+[node name="Scroll" type="ScrollContainer" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem/Coluna"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ListaSFX" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem/Coluna/Scroll"]
+[node name="ListaSFX" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem/Coluna/Scroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ItemSFX" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem/Coluna/Scroll/ListaSFX" instance=ExtResource("1_lquwl")]
+[node name="ItemSFX" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem/Coluna/Scroll/ListaSFX" instance=ExtResource("1_lquwl")]
 layout_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem/Coluna"]
+[node name="HSeparator" type="HSeparator" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem/Coluna"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_7mycd")
 
-[node name="Acoes" type="HBoxContainer" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem/Coluna"]
+[node name="Acoes" type="HBoxContainer" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem/Coluna"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="Nota" type="OptionButton" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem/Coluna/Acoes"]
+[node name="Nota" type="OptionButton" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 selected = 0
@@ -164,112 +165,113 @@ popup/item_10/id = 10
 popup/item_11/text = "B"
 popup/item_11/id = 11
 
-[node name="NomeSFX" type="Button" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem/Coluna/Acoes"]
+[node name="NomeSFX" type="Button" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_272bh")
 
-[node name="AdicionarSFX" type="Button" parent="Fundo/Margem/Coluna/Listas/FundoSFX/Margem/Coluna/Acoes"]
+[node name="AdicionarSFX" type="Button" parent="Fundo/Margem/Coluna/Listas/Sfx/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 
-[node name="PanelContainer2" type="PanelContainer" parent="Fundo/Margem/Coluna/Listas"]
+[node name="Playlist" type="PanelContainer" parent="Fundo/Margem/Coluna/Listas"]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("3_kek77")
 
-[node name="Margem" type="MarginContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer2"]
+[node name="Margem" type="MarginContainer" parent="Fundo/Margem/Coluna/Listas/Playlist"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Coluna" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer2/Margem"]
+[node name="Coluna" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/Playlist/Margem"]
 layout_mode = 2
 
-[node name="Scroll" type="ScrollContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer2/Margem/Coluna"]
+[node name="Scroll" type="ScrollContainer" parent="Fundo/Margem/Coluna/Listas/Playlist/Margem/Coluna"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ListaPlaylist" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer2/Margem/Coluna/Scroll"]
+[node name="ListaPlaylist" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/Playlist/Margem/Coluna/Scroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ItemPlaylist" parent="Fundo/Margem/Coluna/Listas/PanelContainer2/Margem/Coluna/Scroll/ListaPlaylist" instance=ExtResource("2_7mycd")]
+[node name="ItemPlaylist" parent="Fundo/Margem/Coluna/Listas/Playlist/Margem/Coluna/Scroll/ListaPlaylist" instance=ExtResource("2_7mycd")]
 layout_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="Fundo/Margem/Coluna/Listas/PanelContainer2/Margem/Coluna"]
+[node name="HSeparator" type="HSeparator" parent="Fundo/Margem/Coluna/Listas/Playlist/Margem/Coluna"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_7mycd")
 
-[node name="Acoes" type="HBoxContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer2/Margem/Coluna"]
+[node name="Acoes" type="HBoxContainer" parent="Fundo/Margem/Coluna/Listas/Playlist/Margem/Coluna"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="NomeMusica" type="Button" parent="Fundo/Margem/Coluna/Listas/PanelContainer2/Margem/Coluna/Acoes"]
+[node name="NomeMusica" type="Button" parent="Fundo/Margem/Coluna/Listas/Playlist/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/normal = SubResource("StyleBoxFlat_272bh")
 
-[node name="AdicionarMusica" type="Button" parent="Fundo/Margem/Coluna/Listas/PanelContainer2/Margem/Coluna/Acoes"]
+[node name="AdicionarMusica" type="Button" parent="Fundo/Margem/Coluna/Listas/Playlist/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 
-[node name="PanelContainer3" type="PanelContainer" parent="Fundo/Margem/Coluna/Listas"]
+[node name="Transicoes" type="PanelContainer" parent="Fundo/Margem/Coluna/Listas"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Margem" type="MarginContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer3"]
+[node name="Margem" type="MarginContainer" parent="Fundo/Margem/Coluna/Listas/Transicoes"]
 layout_mode = 2
 theme_override_constants/margin_left = 5
 theme_override_constants/margin_top = 5
 theme_override_constants/margin_right = 5
 theme_override_constants/margin_bottom = 5
 
-[node name="Coluna" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem"]
+[node name="Coluna" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem"]
 layout_mode = 2
 theme_override_constants/separation = 5
 
-[node name="Scroll" type="ScrollContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna"]
+[node name="Scroll" type="ScrollContainer" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ListaTransicao" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna/Scroll"]
+[node name="ListaTransicao" type="VBoxContainer" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna/Scroll"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ItemTransicao" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna/Scroll/ListaTransicao" instance=ExtResource("3_7mycd")]
+[node name="ItemTransicao" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna/Scroll/ListaTransicao" instance=ExtResource("3_7mycd")]
 layout_mode = 2
 
-[node name="HSeparator" type="HSeparator" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna"]
+[node name="HSeparator" type="HSeparator" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna"]
 layout_mode = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_7mycd")
 
-[node name="Acoes" type="HBoxContainer" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna"]
+[node name="Acoes" type="HBoxContainer" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 
-[node name="Button" type="Button" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna/Acoes"]
+[node name="Button" type="Button" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 
-[node name="Button2" type="Button" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna/Acoes"]
+[node name="Button2" type="Button" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 
-[node name="Button3" type="Button" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna/Acoes"]
+[node name="Button3" type="Button" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 
-[node name="Control" type="Control" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna/Acoes"]
+[node name="Control" type="Control" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna/Acoes"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Button4" type="Button" parent="Fundo/Margem/Coluna/Listas/PanelContainer3/Margem/Coluna/Acoes"]
+[node name="Button4" type="Button" parent="Fundo/Margem/Coluna/Listas/Transicoes/Margem/Coluna/Acoes"]
 custom_minimum_size = Vector2(32, 0)
 layout_mode = 2
 
@@ -382,6 +384,7 @@ text = "Loop Out"
 [node name="InputLoopOut" parent="Fundo/Margem/Coluna/Player/Coluna/ControlesContainer/HBoxContainer/LoopParam" instance=ExtResource("1_ig7tw")]
 layout_mode = 2
 
-[node name="MainPlayer" type="AudioStreamPlayer" parent="."]
+[node name="PlaylistPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 stream = SubResource("AudioStreamInteractive_1bvp3")
 script = ExtResource("7_272bh")

@@ -24,7 +24,6 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 tooltip_text = "Remover"
 text = "X"
-flat = true
 
 [node name="Nome" type="Label" parent="Linha"]
 custom_minimum_size = Vector2(0, 32)
@@ -38,4 +37,3 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 tooltip_text = "Play"
 text = "P"
-flat = true

@@ -1,0 +1,9 @@
+res://main.tscn
+res://main_player.gd
+res://input_loop.tscn
+res://Elements/item_playlist/item_playlist.tscn
+res://item_transicao.tscn
+res://item_sfx.tscn
+res://main.gd
+res://lista_playlist.gd
+res://playlist.gd
